@@ -456,11 +456,11 @@ struct NchCumulantsId {
 
     // Fill joint pos-neg correction profiles
     // capture inline from pos and neg
-    double jointF11 = posPow.q1 * negPow.q1;          
-    double cf2pos = posPow.q1 * posPow.q1 - posPow.q2; 
-    double cf2neg = negPow.q1 * negPow.q1 - negPow.q2; 
-    double jointF12 = posPow.q1 * cf2neg;              
-    double jointF21 = negPow.q1 * cf2pos;              
+    double jointF11 = posPow.q1 * negPow.q1;
+    double cf2pos = posPow.q1 * posPow.q1 - posPow.q2;
+    double cf2neg = negPow.q1 * negPow.q1 - negPow.q2;
+    double jointF12 = posPow.q1 * cf2neg;
+    double jointF21 = negPow.q1 * cf2pos;
     // ─── Fill raw q-vectors (for cross-verification)
     registry.fill(base + HIST("Q_net_1"), cent, qNet1);
     registry.fill(base + HIST("Q_net_1Sq"), cent, qNet1 * qNet1);
